@@ -1,0 +1,8 @@
+{
+    "env":{
+        "DB_USER":"face_recognition",
+        "DB_PASSWORD":"face_recognition",
+        "DB_NAME":"face_recognition",
+        "SECRET_OR_KEY":"secret"
+    }
+}
