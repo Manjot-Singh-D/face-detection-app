@@ -1,0 +1,7 @@
+html {
+  margin: 0;
+  font-family: "Courier New", Courier, monospace !important;
+  background: linear-gradient(to right, rgb(243, 180, 202), rgb(120, 228, 247));
+  align-items: center;
+  height: 100vh;
+}
