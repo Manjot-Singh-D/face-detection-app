@@ -35,3 +35,9 @@
   font-size: 1.2rem;
   filter: drop-shadow(0 0 0.75rem rgb(243, 180, 202));
 }
+@media screen and (max-width: 900px) {
+  .mainPage_header {
+    letter-spacing: 2px;
+    font-size: 4rem;
+  }
+}

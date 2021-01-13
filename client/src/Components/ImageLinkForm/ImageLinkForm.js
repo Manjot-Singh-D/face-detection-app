@@ -5,9 +5,7 @@ import "./ImageLinkForm.css";
 const ImageLinkForm = (props) => {
   return (
     <div>
-      <p className="f3">
-        Enter the link of picture to predict the number of faces
-      </p>
+      <p className="f3">Enter the link of picture to detect the face</p>
       <div className="form center shadow-3 pa4 w-60">
         <input
           onChange={props.onImageUrlChange}

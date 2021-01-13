@@ -3,8 +3,6 @@ import { Link, useHistory } from "react-router-dom";
 import Navigation from "../Navigation/Navigation";
 import axios from "axios";
 import CautionError from "../CautionError/CautionError";
-import { handleAuthToken, handleLogout } from "../Authentication/auth";
-import jwt_decode from "jwt-decode";
 
 const LoginPage = () => {
   const [inputValue, setInputValue] = useState({ email: "", password: "" });
@@ -26,23 +24,12 @@ const LoginPage = () => {
       };
     });
   };
-  // const handleToken = (token) => {
-  //   handleAuthToken(token);
-  //   const decoded = jwt_decode(token);
-  //   const currentTime = Date.now() / 1000;
-  //   if (decoded.exp < currentTime) {
-  //     handleLogout();
-  //     window.location.href = "./login";
-  //   }
-  // };
   const handleSubmitLogin = (e) => {
     e.preventDefault();
-    console.log(process.env);
     axios
       .post(`${process.env.REACT_APP_BACKEND_URL}/login`, inputValue)
       .then((res) => {
         setDetails(res.data);
-        // handleToken(res.data.token);
       })
       .catch((err) => console.log(err));
   };

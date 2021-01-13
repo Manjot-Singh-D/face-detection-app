@@ -5,7 +5,6 @@ import Navigation from "../Navigation/Navigation";
 import Logo from "../Logo/Logo";
 import Clarifai from "clarifai";
 import axios from "axios";
-// import { handleLogout } from "../Authentication/auth";
 
 const app = new Clarifai.App({ apiKey: "08ea6eb09e49438c9b73de18bdcb1707" });
 
@@ -24,8 +23,6 @@ const DashboardPage = () => {
     });
   }, []);
   const handleLogout = () => {
-    // localStorage.removeItem("jwtToken");
-    // handleAuthToken(false);
     window.location.href = "/";
   };
 
